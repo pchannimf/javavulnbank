@@ -18,3 +18,5 @@ steps:
     APIKey: $(API_KEY)
     APISecret: $(API_SECRET)
     EntitlementPreference: '2'
+    PurchaseEntitlements: false
+    PreferRemediation: false
