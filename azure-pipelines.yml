@@ -1,0 +1,20 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: FortifyOnDemandDynamic@7
+  inputs:
+    APIUrl: $(API_URL)
+    ReleaseId: $(Release_ID)
+    APIAuthenticationType: '1'
+    APIKey: $(API_KEY)
+    APISecret: $(API_SECRET)
+    EntitlementPreference: '2'
